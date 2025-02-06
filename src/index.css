@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.animate-typing {
+  display: inline-block;
+  white-space: normal;  /* Permite que o texto quebre a linha */
+  overflow: hidden;     /* Garante que o texto não ultrapasse a área visível */
+  width: 0;
+  animation: typing 5s steps(40) 1s forwards, blink 0.75s step-end infinite;
+  max-width: 100%;      /* Limita o texto ao tamanho máximo do contêiner */
+  word-wrap: break-word;  /* Quebra a palavra quando atingir o limite do contêiner */
+  word-break: break-word; /* Garante que o texto será quebrado dentro do contêiner */
+}
