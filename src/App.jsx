@@ -95,7 +95,7 @@ function App() {
 
               <div className='w-full flex flex-col items-end md:flex-row md:justify-end gap-2'>
                 { item.options.map((item, key) =>
-                  <label key={key} className="block cursor-pointer px-2 py-1 border rounded-full w-28 text-sm text-green-900 bg-green-300 hover:bg-green-400 border-none peer-checked:bg-green-200 peer-checked:border-green-400 transition">
+                  <label key={key} className="block cursor-pointer px-2 py-1 border rounded-full text-sm text-green-900 bg-green-300 hover:bg-green-400 border-none peer-checked:bg-green-200 peer-checked:border-green-400 transition text-nowrap">
                     <input 
                       type="radio"
                       name="option"
