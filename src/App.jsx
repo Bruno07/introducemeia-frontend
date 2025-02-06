@@ -27,7 +27,7 @@ function App() {
       localStorage.setItem('chatMessages', JSON.stringify(messages))
       setMessages(messages)
     }).catch(resp => {
-        setLoading(false)
+      setLoadingPage(false)
     })
   }
 
@@ -63,7 +63,7 @@ function App() {
           </div>
         }
 
-        { messages.length == 0 &&
+        { (messages.length == 0 && !loadingPage)  &&
           <div className='flex min-h-screen items-center justify-center'>
               <form onSubmit={handleSubmit} className="flex items-center border border-gray-300 rounded-lg w-full md:w-6/12">
                 <input 
